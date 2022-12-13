@@ -23,7 +23,7 @@
             </div>
 
           </form>
-          <span class="forwardFromLogin">Forgot password</span>
+          
 
         </div>
 
