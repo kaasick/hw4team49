@@ -1,5 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div id="contactView">
+    <Header/>
+
+    <Footer/>
+
   </div>
 </template>
+
+<script>
+export default {
+  name: "ContactsView"
+}
+</script>
+
+<style scoped>
+
+</style>

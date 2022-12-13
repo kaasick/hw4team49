@@ -9,6 +9,13 @@
         <p>  <b> Body: </b> {{post.body}} </p>
       </div>
     </div>
+    <div class="container">
+      <router-link to="/create" custom v-slot="{navigate}">
+        <button @click="navigate" class="center">
+          Create Post
+        </button>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -45,7 +52,7 @@ export default {
     },
   },
   mounted() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('http://localhost:3000/auth/posts')
         .then((response) => response.json())
         .then(data => this.posts = data)
         .catch(err => console.log(err.message))

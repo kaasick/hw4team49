@@ -32,4 +32,19 @@ execute(createTblQuery).then(result => {
     }
 });
 
+const createTblQuery2 = `
+    CREATE TABLE IF NOT EXISTS "posts" (
+        id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        body VARCHAR(200) NOT NULL,
+        posttime CHAR(10) NOT NULL
+    );`;
+
+execute(createTblQuery2).then(result => {
+    if (result) {
+        console.log('Table "posts" is created');
+    }else {
+        console.log("Table posts isnt crated")
+    }
+});
+
 module.exports = pool;
