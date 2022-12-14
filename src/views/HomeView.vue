@@ -1,4 +1,5 @@
 <template>
+
   <div class="header">
     <div class="container">
       <button v-if = "authResult" @click="Logout" class="center">Logout</button>
@@ -17,15 +18,23 @@
       </router-link>
       <button v-if="authResult" @click="DeleteAll" class="center">Delete All Posts</button>
     </div>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+
 import auth from "../auth";
+
+
+
+
+
 export default {
   name: "HomeView",
   components: {
+
   },
   data: function() {
     return {
@@ -79,6 +88,7 @@ export default {
         .then(data => this.posts = data)
         .catch(err => console.log(err.message))
 
+    
   }
 };
 </script>

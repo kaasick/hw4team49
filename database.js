@@ -1,12 +1,17 @@
 // database.js
 const Pool = require('pg').Pool;
+
 const pool = new Pool({
     user: "postgres",
-    password: "kool123",
+
+
+    password: "Edvard11", //add your password
+
     database: "testWad",
     host: "localhost",
     port: "5432"
 });
+
 
 const execute = async(query) => {
     try {
@@ -46,5 +51,17 @@ execute(createTblQuery2).then(result => {
         console.log("Table posts isn't created");
     }
 });
+
+pool.connect();
+
+pool.query(`Select * from users`, (err, res) => {
+    if (!err){
+        console.log(res.rows);
+    }else {
+        console.log(err.message);
+    }
+    pool.end;
+})
+
 
 module.exports = pool;

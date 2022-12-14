@@ -4,11 +4,13 @@
         <ul class="nav">
             <li> <router-link to="/">Home</router-link></li>
             <li> | </li>
+
             <li> <router-link to="/login">Signup</router-link></li>
         </ul>
 
         <div class="avatar-container"> 
             <img class="logoga" src="../assets/logo.png" alt="Your avatar"
+
                 @click="toggledropdownMenu">
             <ul class="avatar-dropdown" v-if="dropdownMenu">
                 <li>Kaupo Toba</li>
@@ -43,7 +45,9 @@ header {
     display: flex;
     background-color: rgb(179, 179, 161);
     justify-content: space-between;
+
     border-radius: 10px;
+
     align-items: center;
     
 }
