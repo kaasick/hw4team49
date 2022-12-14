@@ -43,7 +43,7 @@ execute(createTblQuery2).then(result => {
     if (result) {
         console.log('Table "posts" is created');
     }else {
-        console.log("Table posts isnt crated")
+        console.log("Table posts isn't created");
     }
 });
 

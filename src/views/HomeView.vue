@@ -56,6 +56,7 @@ export default {
         .then((response) => response.json())
         .then(data => this.posts = data)
         .catch(err => console.log(err.message))
+
   }
 };
 </script>

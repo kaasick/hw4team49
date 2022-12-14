@@ -115,9 +115,15 @@ app.get('/auth/logout', async (req, res) => {
     console.log('delete jwt request arrived');
     res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
 });
-app.get('/auth/posts', (req, res) => {
-    //get all posts from database table posts
-    //poolik
+app.get('/auth/posts', async (req, res) => {
+    try{
+        const result = await pool.query("SELECT * FROM posts");
+        console.log(result);
+        res.status(200).json(result.rows).send;
+
+    }catch (error) {
+        res.status(401).json({ error: error.message });
+    }
 });
 
 app.post('/auth/post', async (req, res) => {
