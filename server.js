@@ -118,7 +118,6 @@ app.get('/auth/logout', async (req, res) => {
 app.get('/auth/posts', async (req, res) => {
     try{
         const result = await pool.query("SELECT * FROM posts");
-        console.log(result);
         res.status(200).json(result.rows).send;
 
     }catch (error) {
@@ -146,7 +145,8 @@ app.post('/auth/post', async (req, res) => {
 app.post('/auth/deleteposts', async (req, res) => {
     //delete all rows from post table
     try {
-        const result = await pool.query("DELETE * FROM posts");
+        console.log("jo")
+        const result = await pool.query("DELETE FROM posts");
         res.json(result);
     }
     catch (err) {

@@ -53,7 +53,11 @@ export default {
     },
     DeleteAll() {
       fetch("http://localhost:3000/auth/deleteposts", {
-        credentials: 'include', //  Don't forget to specify this if you need cookies
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials:"include",
       })
           .then((response) => response.json())
           .then((data) => {
