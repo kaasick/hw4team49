@@ -112,11 +112,11 @@ h3{
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   color: #444;
-  background: #7e9756;
+  /* background: #7e9756; */
 }
-p{
+/* p{
   background: #796dbd;
-}
+} */
 h1, h2, h3, h4, ul, li, a, input, label, button, div, footer{
   margin: 0;
   padding: 0;

@@ -22,7 +22,7 @@
     .post {
         width: 80%;
         margin: 15px auto;
-        box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
+        /* box-shadow: 0 0 15px rgba(38, 50, 56, 0.33); */
         border-radius: 5px;
     }
 
