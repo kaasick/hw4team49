@@ -142,3 +142,15 @@ app.post('/auth/post', async (req, res) => {
     }
 
 });
+
+app.post('/auth/deleteposts', async (req, res) => {
+    //delete all rows from post table
+    try {
+        const result = await pool.query("DELETE * FROM posts");
+        res.json(result);
+    }
+    catch (err) {
+        console.log(err.message);
+        res.status(400).send(err.message);
+    }
+});

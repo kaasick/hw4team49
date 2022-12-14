@@ -15,6 +15,7 @@
           Create Post
         </button>
       </router-link>
+      <button v-if="authResult" @click="DeleteAll" class="center">Delete All Posts</button>
     </div>
   </div>
 </template>
@@ -48,6 +49,23 @@ export default {
           .catch((e) => {
             console.log(e);
             console.log("error logout");
+          });
+    },
+    DeleteAll() {
+      fetch("http://localhost:3000/auth/deleteposts", {
+        credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            console.log('all posts deleted');
+            //console.log('jwt removed:' + auth.authenticated());
+            this.$router.push("/");
+            //location.assign("/");
+          })
+          .catch((e) => {
+            console.log(e);
+            console.log("error delete all");
           });
     },
   },
