@@ -5,7 +5,7 @@
             <li> <router-link to="/">Home</router-link></li>
             <li> | </li>
 
-            <li> <router-link to="/login">Signup</router-link></li>
+            <li> <router-link to="/contacts">Contact us</router-link></li>
         </ul>
 
         <div class="avatar-container"> 

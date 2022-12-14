@@ -16,9 +16,9 @@ const app = express();
 app.get('/', (req, res) => {
     res.send('Hello postgrEEess321w')
 })
-// app.use(cors({ origin: 'http://localhost:8080', credentials: true }));
+app.use(cors({ origin: 'http://localhost:8080', credentials: true }));
 
-app.use('/api', userRouter)
+// app.use('/api', userRouter)
 
 
 // We need to include "credentials: true" to allow cookies to be represented  

@@ -138,4 +138,10 @@ input ~ button {
   background: whitesmoke;
 }
 
+.btn {
+  background: rgb(151, 225, 216);
+  border-radius: 12px;
+  margin: 2%;
+}
+
 </style>
